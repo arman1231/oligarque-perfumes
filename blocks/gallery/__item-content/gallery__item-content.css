@@ -1,0 +1,7 @@
+.gallery__item-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  border-radius: 0px 0px 5px 5px;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Задача 1</title>
+  <meta charset="UTF-8" />
+</head>
+
+<body>
+  <style>
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid {
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-auto-flow: row dense;
+      background-color: #8c6787;
+      padding: 50px;
+    }
+
+    .el {
+      margin: 0;
+      padding: 10px;
+    }
+
+    .addButton {
+      display: block;
+      padding: 10px;
+      margin: 10px auto;
+      font-weight: 700;
+    }
+
+    .addForm {
+      margin-top: 25px;
+    }
+  </style>
+  <div class="container">
+    <div class="el">У каждого объявления есть свои стили</div>
+    <div class="el">Их не нужно менять</div>
+    <div class="el">Каждое объявление должно быть свободным по высоте</div>
+    <div class="el">А вот ширину нужно будет выставить</div>
+    <div class="el">
+      Ширину элемента root, при необходимости вы можете определить, но в
+      тестах она может быть разная
+    </div>
+    <div class="el">
+      Ширину элемента root, при необходимости вы можете определить, но в
+      тестах
+    </div>
+    <div class="el">
+      Ширину элемента root, при необходимости вы можете определить, но в
+      тестах
+    </div>
+  </div>
+  <form class="addForm" name="add-form" action="#" novalidate>
+    <fieldset class="addFormData">
+      <!-- <input class="addFormInput" name="rootNode" minlength="1" maxlength="30" placeholder="enter rootNode (container)" required> -->
+      <input class="addFormInput" name="columnCount" minlength="1" maxlength="3" placeholder="enter columnCount"
+        required>
+      <input class="addFormInput" name="elementGap" minlength="1" maxlength="3" placeholder="enter elementGap" required>
+    </fieldset>
+    <fieldset class="addFormHandlers">
+      <button class="addButton">Apply renderWaterfall</button>
+    </fieldset>
+  </form>
+  <script>
+    function renderWaterfall(rootNode, columnCount, elementGap) {
+      rootNode.style.display = 'grid';
+      rootNode.style.justifyContent = 'center';
+      rootNode.style.alignItems = "center";
+      rootNode.style.gridAutoFlow = "row dense";
+      rootNode.style.gridTemplateColumns = `repeat(${columnCount}, 1fr)`;
+      rootNode.style.gap = `${elementGap}px`;
+    }
+  </script>
+  <!-- <script>
+    const list = document.querySelector(".container");
+    const addButton = document.querySelector(".addButton");
+    const removeButton = document.querySelector(".removeButton");
+    const el = document.querySelectorAll(".el");
+    // const rootNodeInput = document.querySelector('[name="rootNode"]');
+    const columnCountInput = document.querySelector('[name="columnCount"]');
+    const elementGapInput = document.querySelector('[name="elementGap"]');
+
+    function stopDefAction(evt) {
+      evt.preventDefault();
+    }
+    function renderWaterfall(rootNode, columnCount, elementGap) {
+      rootNode.classList.add("grid");
+      rootNode.style.gridTemplateColumns = `repeat(${columnCount}, 1fr)`;
+      rootNode.style.gap = `${elementGap}px`;
+      el.forEach((element) => {
+        element.style.border = "1px solid red";
+        element.style.color = "white";
+        element.style.textAlign = "center"
+      });
+    }
+    addButton.addEventListener("click", (evt) => {
+      stopDefAction(evt);
+      renderWaterfall(list, columnCountInput.value, elementGapInput.value);
+    });
+  </script> -->
+</body>
+
+</html>

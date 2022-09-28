@@ -1,0 +1,56 @@
+@import url(../vendor/normalize.css);
+@import url(../fonts/fonts.css);
+@import url(../blocks/wrapper/wrapper.css);
+@import url(../blocks/page/page.css);
+@import url(../blocks/page/__footer/page__footer.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/header/__logo/header__logo.css);
+@import url(../blocks/header/__links/header__links.css);
+@import url(../blocks/header/__link/header__link.css);
+@import url(../blocks/header/__link/_active/header__link_active.css);
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__links/footer__links.css);
+@import url(../blocks/footer/__link/footer__link.css);
+@import url(../blocks/footer/__author/footer__author.css);
+@import url(../blocks/main-image/main-image.css);
+@import url(../blocks/description/description.css);
+@import url(../blocks/content/content.css);
+@import url(../blocks/gallery/gallery.css);
+@import url(../blocks/gallery/__cart/gallery__cart.css);
+@import url(../blocks/gallery/__image/gallery__image.css);
+@import url(../blocks/gallery/__item-content/gallery__item-content.css);
+@import url(../blocks/gallery/__item-title/gallery__item-title.css);
+@import url(../blocks/gallery/__item/gallery__item.css);
+@import url(../blocks/gallery/__list/gallery__list.css);
+@import url(../blocks/gallery/__list-item/gallery__list-item.css);
+
+.grid {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  /*   grid-auto-flow: 100px; */
+  gap: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  grid-auto-flow: dense;
+  /* width: 1000px; */
+  background-color: #8c6787;
+  height: 100%;
+}
+
+.el {
+  border: 1px solid red;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  /* height: 100%; */
+  margin: 0;
+}
+
+.button {
+  padding: 10px;
+  margin: 20px auto;
+  font-weight: 700;
+}

@@ -1,0 +1,8 @@
+.gallery__list-item {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.gallery__list-item:not(:last-child) {
+  margin-bottom: 15px;
+}
