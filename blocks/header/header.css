@@ -9,6 +9,7 @@
 @media screen and (max-width: 780px) {
   .header {
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     margin-top: 35px;
   }

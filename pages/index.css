@@ -25,11 +25,14 @@
 @import url(../blocks/gallery/__list-item/gallery__list-item.css);
 
 
-.page_stokist {
+.page_stokist-content {
   color: white;
   background-color: black;
 }
-
+.page_stokist-heading {
+  border: 1px dotted white;
+  padding: 15px;
+}
 .gallery__list-item a {
   color: white;
 }
