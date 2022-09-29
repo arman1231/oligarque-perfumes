@@ -24,6 +24,15 @@
 @import url(../blocks/gallery/__list/gallery__list.css);
 @import url(../blocks/gallery/__list-item/gallery__list-item.css);
 
+
+.page_stokist {
+  color: white;
+  background-color: black;
+}
+
+.gallery__list-item a {
+  color: white;
+}
 .grid {
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
